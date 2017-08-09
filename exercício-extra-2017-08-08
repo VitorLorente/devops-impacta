@@ -1,0 +1,67 @@
+APACHE HTTP SERVER - 2.3/2.4 <<fonte: https://httpd.apache.org/>>
+
+Core Enhancements
+
+Run-time Loadable MPMs
+    Multiple MPMs can now be built as loadable modules at compile time. The MPM of choice can be configured at run time via LoadModule directive.
+Event MPM
+    The Event MPM is no longer experimental but is now fully supported.
+Asynchronous support
+    Better support for asynchronous read/write for supporting MPMs and platforms.
+Per-module and per-directory LogLevel configuration
+    The LogLevel can now be configured per module and per directory. New levels trace1 to trace8 have been added above the debug log level.
+Per-request configuration sections
+    <If>, <ElseIf>, and <Else> sections can be used to set the configuration based on per-request criteria.
+General-purpose expression parser
+    A new expression parser allows to specify complex conditions using a common syntax in directives like SetEnvIfExpr, RewriteCond, Header, <If>, and others. 
+KeepAliveTimeout in milliseconds
+    It is now possible to specify KeepAliveTimeout in milliseconds. 
+NameVirtualHost directive
+    No longer needed and is now deprecated.
+Override Configuration
+    The new AllowOverrideList directive allows more fine grained control which directives are allowed in .htaccess files. 
+Config file variables
+    It is now possible to Define variables in the configuration, allowing a clearer representation if the same value is used at many places in the configuration. 
+Reduced memory usage
+    Despite many new features, 2.4.x tends to use less memory than 2.2.x.
+
+   
+NGINX 1.13.3/1.13.4 <<fonte: https://nginx.org/en/CHANGES >>
+
+Feature: the ngx_http_mirror_module.
+
+Bugfix: client connections might be dropped during configuration
+testing when using the "reuseport" parameter of the "listen"
+directive on Linux.
+
+*) Bugfix: request body might not be available in subrequests if it was
+saved to a file and proxying was used.
+
+*) Bugfix: cleaning cache based on the "max_size" parameter did not work
+on Windows.
+
+*) Bugfix: any shared memory allocation required 4096 bytes on Windows.
+
+*) Bugfix: nginx worker might be terminated abnormally when using the
+"zone" directive inside the "upstream" block on Windows.
+
+WORDPRESS 4.7/4.8 <<fonte: https://blog.apiki.com/2017/06/14/wordpress-4-8-editor/ >>
+
+Manter a retrocompatibilidade com os browsers antigos é um desafio e esforço colossal. Em alguns cenários isso impede o avanço e implementação de novas tecnologias.
+
+As versões mais antigas do Internet Explorer sempre foram travas para as equipes de desenvolvimento de qualquer plataforma.
+
+A partir da versão 4.8 do WordPress, o suporte às versões do IE 8, 9 e 10 será interrompido. A Microsoft, inclusive, fez o mesmo em janeiro de 2016.
+
+A cada versão e novos recursos implementados, o WordPress usa mais a linguagem JavaScript. Os navegadores de internet modernos tem suporte mais completo à linguagem e permitem o avanço e uso das novas possibilidades.
+
+É claro que você conseguirá acessar o Painel do WordPress fazendo uso do Internet Explorer 8, 9 e 10. No entanto, as possibilidades para essas versões serão limitadas.
+
+Os usuários que acessarem o WordPress com essas versões, serão apresentadas ao Browser Happy, um serviço que lhes auxilia na escolha e troca de um browser mais moderno.
+
+Imagine o seguinte cenário: você está trabalhando em um texto no editor do WordPress. Então você aplica um link em parte desse texto. Daí, resolve alterar parte desse texto que está com o link aplicado.
+
+A experiência com essa funcionalidade é frustrante. Sabemos que links são aplicados a todo momento, logo a insatisfação é frequente.
+
+Link boundarie é uma melhoria no editor do WordPress 4.8 e as imagens abaixo explicarão facilmente a funcionalidade dele.
+
